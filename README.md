@@ -2,7 +2,6 @@
 
 import streamlit as st
 
-# Define the SavingsAccount class
 class SavingsAccount:
     def __init__(self, username, balance):
         self.username = username
@@ -18,11 +17,9 @@ class SavingsAccount:
         self.balance -= amount
         return f"Withdrew ${amount} successfully."
 
-# Define the CurrentAccount class (inherits SavingsAccount behavior here)
 class CurrentAccount(SavingsAccount):
     pass  # You can add CurrentAccount specific features here if needed
 
-# Streamlit app
 st.set_page_config(page_title="Bank App", page_icon="🏦")
 st.title("🏦 WELCOME")
 
@@ -78,7 +75,6 @@ else:
             self.balance -= amount
             return f"Withdrew ${amount}. New balance: ${self.balance}"
         return "Overdraft limit exceeded or invalid amount."
-
 
         class SavingsAccount:
     def _init_(self, owner, balance=0):
