@@ -18,11 +18,8 @@ class SavingsAccount:
         return f"Withdrew ${amount} successfully."
 
 class CurrentAccount(SavingsAccount):
-    pass  # You can add CurrentAccount specific features here if needed
-
 st.set_page_config(page_title="Bank App", page_icon="🏦")
 st.title("🏦 WELCOME")
-
 account_type = st.sidebar.selectbox("Choose Account Type", ["Savings", "Current"])
 username = st.sidebar.text_input("Enter your name")
 balance = st.sidebar.number_input("Initial Balance", min_value=0, step=50)
